@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RamaTime -  منصة مسلسلات وأفلام الأنمي</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body data-page="home">
+
+  <!-- شريط التنقل العلوي (Navbar) -->
+  <header class="navbar">
+    <div class="logo">
+      <i data-lucide="film" class="logo-icon"></i>
+      <span>Rama<span class="highlight">Time</span></span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-item active" data-target="home-view">الرئيسية</a>
+      <a href="movies.html" class="nav-item" data-target="movies-view">الأفلام</a>
+      <a href="series.html" class="nav-item" data-target="series-view">المسلسلات</a>
+      <a href="watchlist.html" class="nav-item" data-target="watchlist-view">قائمتي <span id="watchlist-count" class="badge-count">0</span></a>
+    </nav>
+    <div class="nav-actions">
+      <div class="search-box">
+        <i data-lucide="search" class="search-icon"></i>
+        <input type="text" id="search-input" placeholder="ابحث عن فيلم أو مسلسل..." />
+      </div>
+      <div class="user-avatar" id="login-trigger" title="تسجيل الدخول">R</div>
+    </div>
+  </header>
+
+  <div class="view-container">
+
+    <!-- 1. واجهة الرئيسية (Home View) -->
+    <div id="home-view" class="view-section active-view">
+      <section class="hero">
+        <div class="hero-content">
+
+          <span class="badge">الأكثر مشاهدة هذا الأسبوع</span>
+          <h1 id="hero-title">عالم من الخيال والأكشن </h1>
+          <p>تابع أحدث الأفلام والمسلسلات  بجودة عالية، مع تفاصيل كاملة وقائمة تشغيل خاصة بك.</p>
+          <p id="hero-sub"></p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary" id="hero-watch"><i data-lucide="play" class="btn-icon"></i> مشاهدة الآن</button>
+            <button class="btn btn-secondary" id="hero-wl"><i data-lucide="plus" class="btn-icon"></i> <span class="wl-text">أضف للقائمة</span></button>
+          </div>
+        </div>
+      </section>
+
+      <main class="main-container">
+        <section class="movie-section">
+          <div class="section-header">
+            <h2>أحدث الإصدارات الشائعة</h2>
+          </div>
+          <div class="movies-grid" id="all-movies-grid" data-list="home"></div>
+        </section>
+
+        <section class="movie-section">
+          <div class="section-header">
+            <h2>أفلام الأنمي</h2>
+            <a class="view-all" href="movies.html">عرض الكل ←</a>
+          </div>
+          <div class="movies-grid" data-list="movies" data-limit="6"></div>
+        </section>
+
+        <section class="movie-section">
+          <div class="section-header">
+            <h2>مسلسلات الأنمي</h2>
+            <a class="view-all" href="series.html">عرض الكل ←</a>
+          </div>
+          <div class="movies-grid" data-list="series" data-limit="6"></div>
+        </section>
+      </main>
+    </div>
+
+  </div>
+
+<footer class="cinema-footer">
+
+    <div class="footer-glow"></div>
+
+    <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+
+            <h2>RAMA<span>TIME</span></h2>
+
+            <div class="brand-line"></div>
+
+            <p>
+                عالم من أفلام ومسلسلات الأنمي،
+                حيث تبدأ الحكايات ولا تنتهي المتعة.
+                اكتشف أحدث أعمال الأنمي
+                واستمتع بتجربة مشاهدة مختلفة.
+            </p>
+
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">◎</a>
+                <a href="#" aria-label="Telegram">➤</a>
+                <a href="#" aria-label="YouTube">▶</a>
+            </div>
+
+        </div>
+
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+
+            <h3>استكشف الموقع</h3>
+
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="movies.html">الأفلام</a></li>
+                <li><a href="series.html">المسلسلات</a></li>
+                <li><a href="watchlist.html">قائمتي</a></li>
+            </ul>
+
+        </div>
+
+
+        <!-- Categories -->
+        <div class="footer-column">
+
+            <h3>التصنيفات</h3>
+
+            <ul>
+                <li><a href="search.html?q=أكشن">أكشن</a></li>
+                <li><a href="search.html?q=دراما">دراما</a></li>
+                <li><a href="search.html?q=رومانسي">رومانسي</a></li>
+                <li><a href="search.html?q=خيال%20علمي">خيال علمي</a></li>
+            </ul>
+
+        </div>
+
+
+        <!-- About -->
+        <div class="footer-column">
+
+            <h3>عن الموقع</h3>
+
+            <ul>
+                <li><a href="about.php">من نحن</a></li>
+                <li><a href="contact.php">اتصل بنا</a></li>
+                <li><a href="#">سياسة الخصوصية</a></li>
+                <li><a href="#">شروط الاستخدام</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Rama<span>Time</span>.
+            جميع الحقوق محفوظة.
+        </p>
+
+        <p class="footer-message">
+            MADE WITH <span>♥</span> FOR MOVIE LOVERS
+        </p>
+
+    </div>
+
+</footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
